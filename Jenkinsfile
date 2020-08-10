@@ -1,9 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'java:8'
+      args '"java", "-jar", "Projects.jar"'
+    }
+
+  }
   stages {
     stage('build') {
       steps {
-        sh 'mvn clean install'
+        sh ',mmm'
       }
     }
 
