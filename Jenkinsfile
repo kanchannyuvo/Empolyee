@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'java:8'
-      args '"java", "-jar", "Projects.jar"'
+      args '-p 8081:8081'
     }
 
   }
